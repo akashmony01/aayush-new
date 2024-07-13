@@ -1,0 +1,51 @@
+
+.mainContentParent {
+    transition: 0.3s;
+    min-height: 100vh;
+    background-color: var(--bg-3);
+}
+
+.sidebarParent {
+    transition: 0.3s;
+    z-index: 99999;
+}
+
+.mobileOverlay {
+    background-color: var(--primary);
+    opacity: 0.20;
+    z-index: 99998;
+}
+
+.sidebarParent.hidden {
+    transform: translateX(-100%);
+}
+
+.sideBarToggler {
+    position: fixed;
+    top: 50px;
+    border: 1px solid var(--border-dark);
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.sideBarToggler:hover,
+.sideBarToggler.active {
+    opacity: 1;
+    background-color: var(--primary);
+}
+
+.sideBarToggler svg {
+    stroke: var(--primary);
+    fill: none;
+}
+
+.sideBarToggler:hover svg {
+    stroke: white;
+}
+
+.sideBarToggler.active svg {
+    stroke: white;
+}

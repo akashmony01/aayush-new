@@ -1,37 +1,182 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
-/* Core CSS required for Ionic components to work properly */
-@import "@ionic/angular/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
-@import "@ionic/angular/css/normalize.css";
-@import "@ionic/angular/css/structure.css";
-@import "@ionic/angular/css/typography.css";
-@import "@ionic/angular/css/display.css";
-
-/* Optional CSS utils that can be commented out */
-@import "@ionic/angular/css/padding.css";
-@import "@ionic/angular/css/float-elements.css";
-@import "@ionic/angular/css/text-alignment.css";
-@import "@ionic/angular/css/text-transformation.css";
-@import "@ionic/angular/css/flex-utils.css";
-
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+@font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-Light.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-Light.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-LightItalic.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-LightItalic.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-Regular.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-Regular.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-Italic.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-Italic.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-Medium.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-Medium.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-MediumItalic.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-MediumItalic.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-Bold.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-Bold.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-BoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-BoldItalic.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-Black.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-Black.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./assets/fonts/satoshi/Satoshi-BlackItalic.woff2') format('woff2'),
+    url('./assets/fonts/satoshi/Satoshi-BlackItalic.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: italic;
+  }
+  
+  
+  :root {
+    --primary: #5A36CD;
+    --primary-app: #5A36CD;
+    --primary-dark: #1C0F46;
+    --primary-light: #F4F0FF;
+    --text: #000000;
+    --text-light: #838383;
+    --bg-1: #FBF9FF;
+    --bg-2: #F8F8F8;
+    --bg-3: #F4F0FF;
+    --border-1: #d0c2f6;
+    --bg-dark: #1C0F46;
+    --border: #F2F2F2;
+    --border-dark: #DADBE0;
+    --secondary: #B5FF9B;
+    --secondary-light: #E5FFDC;
+  }
+  
+  
+  html,
+  body{
+    scroll-behavior: smooth;
+    font-family: Satoshi !important;
+  }
+  
+  .btn,
+  .button,
+  button,
+  a {
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  
+  /* custom utility classes */
+  
+  
+  .btn:hover,
+  .button:hover,
+  button:hover,
+  a:hover {
+    opacity: 0.8;
+  }
+  
+  p,h1,h2,h3,h4,h5,h6 {
+    margin: 0 !important;
+  }
+  
+  .hideScrollbar {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hideScrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  .fw-black {
+    font-weight: 900;
+  }
+  
+  .ltr-spacing-1{
+    letter-spacing: 1px;
+  }
+  
+  .ltr-spacing-2{
+    letter-spacing: 2px;
+  }
+  
+  .ltr-spacing-3{
+    letter-spacing: 3px;
+  }
+  
+  
+  .resetUl,
+  .resetOl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .image-capture-modal .modal-wrapper {
+    --height: 70% !important;
+    border-radius: 5%;
+    overflow: auto;
+    //overscroll-behavior: ;
+  }
